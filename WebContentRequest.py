@@ -23,10 +23,17 @@ print("------------------")
 print(content1.text) # html file content
 
 
-# In[ ]:
+# In[7]:
 
 
+import bs4
+import urllib.request as rqst1
 
+content2 = rqst1.urlopen('http://github.com/osailansamar').read()
+rslt = bs4.BeautifulSoup(content2,'lxml')
+
+for i in rslt.find_all('p'):
+    print (i.text)
 
 
 # In[ ]:
