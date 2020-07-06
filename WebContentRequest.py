@@ -23,12 +23,13 @@ print("------------------")
 print(content1.text) # html file content
 
 
-# In[7]:
+# In[9]:
 
 
 import bs4
 import urllib.request as rqst1
 
+# try another way retrieve the content of the web page as text
 content2 = rqst1.urlopen('http://github.com/osailansamar').read()
 rslt = bs4.BeautifulSoup(content2,'lxml')
 
